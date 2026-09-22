@@ -10,7 +10,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://blog-system-one-phi.vercel.app'
+  origin: [
+	'https://blog-system-one-phi.vercel.app',
+  	'https://blog-system-6foiwl6ql-samis-projects-dfdd6365.vercel.app'
+	]
 }));
 
 app.use(express.json());
