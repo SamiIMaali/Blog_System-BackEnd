@@ -46,7 +46,7 @@ app.use(cors({ origin: 'http://localhost:5173' })); // عدّل origin حسب ت
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI)
 .then(() => {
         console.log("MongoDB connected successfully");
     })
