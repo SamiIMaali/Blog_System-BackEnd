@@ -11,7 +11,17 @@ const express = require('express');
 const router = express.Router();
 const { register, login } = require('../controllers/authController');
 
-router.post('/register', register);
+//router.post('/register', register);
+router.post("/register", (req, res, next) => {
+  console.log("✅ /register route reached");
+  console.log("Request body:", 
+  {
+   req.body,
+   password: req.body.password ? "[RECEIVED]" : "[MISSING]"
+  });
+
+  next();
+}, register);
 router.post('/login', login);
 
 module.exports = router;
