@@ -170,9 +170,7 @@ const app = express();
 // =====================================================
 
 const allowedOrigins = [
-  'https://blog-system-one-phi.vercel.app',
-  'https://blog-system-6foiwl6ql-samis-projects-dfdd6365.vercel.app',
-  'https://blog-system-mbvfwrmk7-samis-projects-dfdd6365.vercel.app'
+  'https://blog-system-one-phi.vercel.app'
 ];
 
 app.use(cors({
