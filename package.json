@@ -1,7 +1,7 @@
 {
   "name": "Blog_System-BackEnd",
   "version": "1.0.0",
-  "description": "",
+  "description": "Blog System REST API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,7 @@
     "node": ">=18.x"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sami Ibrahim Maali",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

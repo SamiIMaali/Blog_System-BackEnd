@@ -1,24 +1,82 @@
-/*welcome here in route post file for java script*
-
+/*
 const express = require('express');
-const router = express.Router();
-const { createPost, updatePost, deletePost, getPosts, getPostById} = require('../controllers/postController');
-const protect = require('../middleware/authMiddleware');  // استيراد middleware للتحقق من المصادقة
 
+const router = express.Router();
+
+const protect = require('../middleware/authMiddleware');
+
+const {
+  createPost,
+  getPosts,
+  getPostById,
+  updatePost,
+  deletePost
+} = require('../controllers/postController');
+
+
+// =====================================================
+// PUBLIC ROUTES
+// =====================================================
+
+// Get all posts
+router.get('/', getPosts);
+
+// Get single post
+router.get('/:id', getPostById);
+
+
+// =====================================================
+// PROTECTED ROUTES
+// =====================================================
+
+// Create post
 router.post('/', protect, createPost);
-router.get('/', protect, getPosts);
-router.get('/:id', protect, getPostById);
+
+// Update post
 router.put('/:id', protect, updatePost);
+
+// Delete post
 router.delete('/:id', protect, deletePost);
+
 
 module.exports = router;
 */
-const express = require('express');
-const router = express.Router();
-const protect = require('../middleware/authMiddleware');
-const { createPost, getPosts } = require('../controllers/postController');
 
-router.get('/', getPosts);           // متاح للجميع
-router.post('/', protect, createPost); // إنشاء يتطلب توكن
+const express = require('express');
+
+const protect = require('../middleware/authMiddleware');
+
+const {
+  createPost,
+  getPosts,
+  getPostById,
+  updatePost,
+  deletePost,
+} = require('../controllers/postController');
+
+const router = express.Router();
+
+// =====================================================
+// PUBLIC ROUTES
+// =====================================================
+
+// GET /api/posts
+router.get('/', getPosts);
+
+// GET /api/posts/:id
+router.get('/:id', getPostById);
+
+// =====================================================
+// PROTECTED ROUTES
+// =====================================================
+
+// POST /api/posts
+router.post('/', protect, createPost);
+
+// PUT /api/posts/:id
+router.put('/:id', protect, updatePost);
+
+// DELETE /api/posts/:id
+router.delete('/:id', protect, deletePost);
 
 module.exports = router;
