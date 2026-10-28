@@ -38,7 +38,6 @@ The backend is designed to work with a React frontend, providing the functionali
 
 ## 🛠️ Technologies Used
 
-|----------------------|--------------------------------------------|
 | Technology           | Purpose                                    |
 |----------------------|--------------------------------------------|
 | Node.js              | JavaScript runtime for the backend         |
@@ -50,7 +49,6 @@ The backend is designed to work with a React frontend, providing the functionali
 | dotenv               | Loading environment variables              |
 | Git & GitHub         | Version control and source code management |
 | Render               | Backend deployment                         |
-|----------------------|--------------------------------------------|
 
 ### Directory Responsibilities
 
@@ -91,14 +89,13 @@ The API uses the `/api` prefix.
 
 ### Authentication Routes
 
-| Method | Endpoint | Description | Authentication |
-
-| POST | `/api/auth/register` | Register a new user | Not required |
-| POST | `/api/auth/login` | Log in an existing user | Not required |
+| Method | Endpoint               | Description             | Authentication |
+|--------|------------------------|-------------------------|----------------|
+| POST   | `/api/auth/register`   | Register a new user     | Not required   |
+| POST   | `/api/auth/login`      | Log in an existing user | Not required   |
 
 ### Blog Post Routes
 
-|--------|------------------|--------------------------|----------------|
 | Method | Endpoint         | Description              | Authentication |
 |--------|------------------|--------------------------|----------------|
 | GET    | `/api/posts`     | Retrieve all blog posts  | Not required   |
@@ -106,7 +103,6 @@ The API uses the `/api` prefix.
 | POST   | `/api/posts`     | Create a new post        | Required       |
 | PUT    | `/api/posts/:id` | Update an existing post  | Required       |
 | DELETE | `/api/posts/:id` | Delete a post            | Required       |
-|--------|------------------|--------------------------|----------------|
 
 ## 🔐 Authentication Flow
 
