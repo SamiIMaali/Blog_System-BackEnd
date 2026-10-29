@@ -166,10 +166,6 @@ The frontend uses the API service in `src/services/api.js` to communicate with t
 
 The deployed frontend connects to the backend using the `VITE_API_URL` environment variable.
 
-## 🚀 Deployment
-
-The backend is deployed on Render, while the frontend is hosted on Vercel and the database is hosted on MongoDB Atlas.
-
 ## 🎯 Project Goals
 
 This project was developed to practice and demonstrate full-stack web development concepts, including:
